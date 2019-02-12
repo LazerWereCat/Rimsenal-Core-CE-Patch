@@ -115,7 +115,7 @@
 					  <li Class="CombatExtended.CompProperties_AmmoUser">
 						<magazineSize>12</magazineSize>
 						<reloadTime>4</reloadTime>
-						<ammoSet>AmmmoSet_32ACP</ammoSet>
+						<ammoSet>AmmoSet_32ACP</ammoSet>
 					  </li>
 					  <li Class="CombatExtended.CompProperties_FireModes" />
 					</comps>
@@ -627,7 +627,7 @@
 					<li Class="CombatExtended.CompProperties_AmmoUser">
 						<magazineSize>36</magazineSize>
 						<reloadTime>4</reloadTime>
-						<ammoSet>AmmmoSet_9x19mmPara</ammoSet>
+						<ammoSet>AmmoSet_9x19mmPara</ammoSet>
 					</li>
 					<li Class="CombatExtended.CompProperties_FireModes">
 						<aimedBurstShotCount>3</aimedBurstShotCount>
@@ -640,8 +640,8 @@
 					</weaponTags>
 				</value>
 			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/thingDef[defName="GD_HVSMG"]/tools</xpath>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/thingDef[defName="GD_HVSMG"]</xpath>
 				<value>
 					<tools>
 						<li Class="CombatExtended.ToolCE">
@@ -682,10 +682,11 @@
 
 
 			<!-- ==========  GD Multi Launcher - Frag =========== -->
-
+			
 			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>GD_GrenadeLauncher</defName>
 				<statBases>
+					<WorkToMake>55000</WorkToMake>
 					<Mass>5.5</Mass>
 					<RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
 					<SightsEfficiency>1.1</SightsEfficiency>
@@ -701,11 +702,14 @@
 					<warmupTime>1.1</warmupTime>
 					<range>40</range>
 					<minRange>5</minRange>
+					<soundCast>ShotGdgrenade</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>14</muzzleFlashScale>
 				</Properties>
 				<AmmoUser>
 					<magazineSize>6</magazineSize>
 					<reloadTime>5.1</reloadTime>
-					<ammoSet>AmmmoSet_40x46mmGrenade</ammoSet>
+					<ammoSet>AmmoSet_40x46mmGrenade</ammoSet>
 				</AmmoUser>
 				<FireModes>
 					<aiUseBurstMode>False</aiUseBurstMode>
@@ -753,35 +757,55 @@
 
 
 			<!-- ==========  GD Multi Launcher - Incendiary  =========== -->
-
-			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-				<defName>GD_INGrenadeLauncher</defName>
-				<statBases>
-					<Mass>5.5</Mass>
-					<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
-					<SightsEfficiency>1.1</SightsEfficiency>
-					<ShotSpread>0.18</ShotSpread>
-					<SwayFactor>1.15</SwayFactor>
-					<Bulk>6.0</Bulk>
-				</statBases>
-				<Properties>
-					<recoilAmount>2.63</recoilAmount>
-					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_30x64mmFuel_Incendiary</defaultProjectile>
-					<warmupTime>1.1</warmupTime>
-					<range>40</range>
-					<minRange>5</minRange>
-				</Properties>
-				<AmmoUser>
-					<magazineSize>6</magazineSize>
-					<reloadTime>5.1</reloadTime>
-					<ammoSet>AmmoSet_30x64mmFuel</ammoSet>
-				</AmmoUser>
-				<FireModes>
-					<aiUseBurstMode>False</aiUseBurstMode>
-					<aiAimMode>SuppressFire</aiAimMode>
-				</FireModes>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/thingDef[defName="GD_INGrenadeLauncher"]/statBases</xpath>
+				<value>
+					<statBases>
+						<WorkToMake>10</WorkToMake>
+						<SightsEfficiency>1.1</SightsEfficiency>
+						<ShotSpread>0.18</ShotSpread>
+						<SwayFactor>1.15</SwayFactor>
+						<Bulk>6.0</Bulk>
+						<Mass>5.5</Mass>
+						<RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+					</statBases>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/thingDef[defName="GD_INGrenadeLauncher"]/verbs</xpath>
+				<value>
+					<verbs>
+					<li Class="CombatExtended.VerbPropertiesCE">
+						<recoilAmount>2.63</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>Bullet_30x64mmFuel_Incendiary</defaultProjectile>
+						<warmupTime>1.1</warmupTime>
+						<range>40</range>
+						<minRange>5</minRange>
+						<soundCast>ShotGdgrenade</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>15</muzzleFlashScale>
+					</li>
+					</verbs>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/thingDef[defName="GD_INGrenadeLauncher"]</xpath>
+				<value>
+					<comps>
+					<li Class="CombatExtended.CompProperties_AmmoUser">
+						<magazineSize>6</magazineSize>
+						<reloadTime>5.1</reloadTime>
+						<ammoSet>AmmoSet_30x64mmFuel</ammoSet>
+					</li>
+					<li Class="CombatExtended.CompProperties_FireModes">
+						<aiUseBurstMode>false</aiUseBurstMode>
+						<aiAimMode>SuppressFire</aiAimMode>
+					</li>
+					</comps>
+				</value>
 			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/thingDef[defName="GD_INGrenadeLauncher"]/tools</xpath>
@@ -824,34 +848,55 @@
 
 
 			<!-- ==========  GD Multi Launcher - Smoke  =========== -->
-
-			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-				<defName>GD_SKGrenadeLauncher</defName>
-				<statBases>
-					<Mass>5.5</Mass>
-					<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
-					<SightsEfficiency>1.1</SightsEfficiency>
-					<ShotSpread>0.18</ShotSpread>
-					<SwayFactor>1.15</SwayFactor>
-					<Bulk>6.0</Bulk>
-				</statBases>
-				<Properties>
-					<recoilAmount>2.63</recoilAmount>
-					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Proj_GrenadeSmoke</defaultProjectile>
-					<warmupTime>1.1</warmupTime>
-					<range>40</range>
-					<minRange>5</minRange>
-				</Properties>
-				<AmmoUser>
-					<magazineSize>6</magazineSize>
-					<reloadTime>5.1</reloadTime>
-					<ammoSet>Proj_GrenadeSmoke</ammoSet>
-				</AmmoUser>
-				<FireModes>
-					<aiUseBurstMode>False</aiUseBurstMode>
-				</FireModes>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/thingDef[defName="GD_SKGrenadeLauncher"]/statBases</xpath>
+				<value>
+					<statBases>
+						<WorkToMake>10</WorkToMake>
+						<SightsEfficiency>1.1</SightsEfficiency>
+						<ShotSpread>0.18</ShotSpread>
+						<SwayFactor>1.15</SwayFactor>
+						<Bulk>6.0</Bulk>
+						<Mass>5.5</Mass>
+						<RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+					</statBases>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/thingDef[defName="GD_SKGrenadeLauncher"]/verbs</xpath>
+				<value>
+					<verbs>
+					<li Class="CombatExtended.VerbPropertiesCE">
+						<recoilAmount>2.63</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>Bullet_40x46mmGrenade_SMK</defaultProjectile>
+						<warmupTime>1.1</warmupTime>
+						<range>40</range>
+						<minRange>5</minRange>
+						<soundCast>ShotGdgrenade</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>15</muzzleFlashScale>
+					</li>
+					</verbs>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/thingDef[defName="GD_SKGrenadeLauncher"]</xpath>
+				<value>
+					<comps>
+					<li Class="CombatExtended.CompProperties_AmmoUser">
+						<magazineSize>6</magazineSize>
+						<reloadTime>5.1</reloadTime>
+						<ammoSet>AmmoSet_40x46mmSMKGrenade</ammoSet>
+					</li>
+					<li Class="CombatExtended.CompProperties_FireModes">
+						<aiUseBurstMode>false</aiUseBurstMode>
+						<aiAimMode>SuppressFire</aiAimMode>
+					</li>
+					</comps>
+				</value>
 			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/thingDef[defName="GD_SKGrenadeLauncher"]/tools</xpath>
@@ -894,35 +939,55 @@
 
 
 			<!-- ==========  GD Multi Launcher - Shotgun  =========== -->
-
-			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-				<defName>GD_BSLauncher</defName>
-				<statBases>
-					<Mass>5.5</Mass>
-					<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
-					<SightsEfficiency>1.1</SightsEfficiency>
-					<ShotSpread>0.18</ShotSpread>
-					<SwayFactor>1.15</SwayFactor>
-					<Bulk>6.0</Bulk>
-				</statBases>
-				<Properties>
-					<recoilAmount>2.35</recoilAmount>
-					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
-					<warmupTime>1.1</warmupTime>
-					<burstShotCount>3</burstShotCount>
-					<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
-					<range>16</range>
-				</Properties>
-				<AmmoUser>
-					<magazineSize>18</magazineSize>
-					<reloadTime>5.1</reloadTime>
-					<ammoSet>AmmoSet_12Gauge</ammoSet>
-				</AmmoUser>
-				<FireModes>
-					<aiUseBurstMode>true</aiUseBurstMode>
-				</FireModes>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/thingDef[defName="GD_BSLauncher"]/statBases</xpath>
+				<value>
+					<statBases>
+						<WorkToMake>10</WorkToMake>
+						<SightsEfficiency>1.1</SightsEfficiency>
+						<ShotSpread>0.18</ShotSpread>
+						<SwayFactor>1.15</SwayFactor>
+						<Bulk>6.0</Bulk>
+						<Mass>5.5</Mass>
+						<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+					</statBases>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/thingDef[defName="GD_BSLauncher"]/verbs</xpath>
+				<value>
+					<verbs>
+					<li Class="CombatExtended.VerbPropertiesCE">
+						<recoilAmount>2.63</recoilAmount>
+						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+						<warmupTime>1.1</warmupTime>
+						<range>16</range>
+						<burstShotCount>3</burstShotCount>
+						<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+						<soundCast>ShotGRS</soundCast>
+						<soundCastTail>GunTail_Heavy</soundCastTail>
+						<muzzleFlashScale>6</muzzleFlashScale>
+					</li>
+					</verbs>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/thingDef[defName="GD_BSLauncher"]</xpath>
+				<value>
+					<comps>
+					<li Class="CombatExtended.CompProperties_AmmoUser">
+						<magazineSize>18</magazineSize>
+						<reloadTime>5.1</reloadTime>
+						<ammoSet>AmmoSet_12Gauge</ammoSet>
+					</li>
+					<li Class="CombatExtended.CompProperties_FireModes">
+						<aiUseBurstMode>true</aiUseBurstMode>
+					</li>
+					</comps>
+				</value>
 			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/thingDef[defName="GD_BSLauncher"]/tools</xpath>
