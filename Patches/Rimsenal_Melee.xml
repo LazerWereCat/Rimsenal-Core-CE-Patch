@@ -49,11 +49,14 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/statBases</xpath>
+				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/equippedStatOffsets</xpath>
 				<value>
 					<Bulk>3.6</Bulk>
 				</value>
 			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/equippedStatOffsets</xpath>
+			</li>			
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]</xpath>
 				<value>
@@ -115,11 +118,14 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]/statBases</xpath>
+				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]/equippedStatOffsets</xpath>
 				<value>
 					<Bulk>1.2</Bulk>
 				</value>
 			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]/equippedStatOffsets</xpath>
+			</li>				
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]</xpath>
 				<value>
@@ -181,11 +187,14 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="YP_BingJu"]/statBases</xpath>
+				<xpath>Defs/ThingDef[defName="YP_BingJu"]/equippedStatOffsets</xpath>
 				<value>
 					<Bulk>6</Bulk>
 				</value>
 			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="YP_BingJu"]/equippedStatOffsets</xpath>
+			</li>				
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="YP_BingJu"]</xpath>
 				<value>
@@ -230,11 +239,14 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="JI_Ormbane"]/statBases</xpath>
+				<xpath>Defs/ThingDef[defName="JI_Ormbane"]/equippedStatOffsets</xpath>
 				<value>
 					<Bulk>9.5</Bulk>
 				</value>
 			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="JI_Ormbane"]/equippedStatOffsets</xpath>
+			</li>				
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="JI_Ormbane"]</xpath>
 				<value>
@@ -301,7 +313,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/statBases</xpath>
+				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/equippedStatOffsets</xpath>
 				<value>
 					<Bulk>3.6</Bulk>
 				</value>
@@ -377,7 +389,7 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="TE_Eris"]/statBases</xpath>
+				<xpath>Defs/ThingDef[defName="TE_Eris"]/equippedStatOffsets</xpath>
 				<value>
 					<Bulk>1.2</Bulk>
 				</value>
@@ -411,6 +423,7 @@
 				<value>
 					<li>CE_OneHandedWeapon</li>
 				</value>
-			</li>			
+			</li>
+		</operations>
 	</Operation>
 </Patch>
