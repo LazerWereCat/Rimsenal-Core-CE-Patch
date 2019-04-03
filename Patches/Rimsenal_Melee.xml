@@ -9,6 +9,7 @@
 			</li>
 
 			<!-- Torch Sword-->			
+			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/tools</xpath>
 				<value>
@@ -62,26 +63,13 @@
 						<MeleeParryChance>0.36</MeleeParryChance>
 					</equippedStatOffsets>
 				</value>
-			</li>
-			<li Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/weaponTags</xpath>
-				<success>Invert</success>
-				</li>
-				<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]</xpath>
-				<value>
-				<weaponTags/><weaponTags/>
-				</value>
-				</li>
-			</operations>
 			</li>			
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/weaponTags</xpath>
+				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]</xpath>
 				<value>
-					<li>CE_OneHandedWeapon</li>
+					<weaponTags>
+						<li>CE_OneHandedWeapon</li>
+					</weaponTags>
 				</value>
 			</li>
 
@@ -121,33 +109,18 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]</xpath>
+				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]/equippedStatOffsets</xpath>
 				<value>
-					<equippedStatOffsets>
-						<MeleeCritChance>0.3</MeleeCritChance>
-						<MeleeParryChance>0.3</MeleeParryChance>
-					</equippedStatOffsets>
+					<MeleeCritChance>0.3</MeleeCritChance>
+					<MeleeParryChance>0.3</MeleeParryChance>
 				</value>
-			</li>
-			<li Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]/weaponTags</xpath>
-				<success>Invert</success>
-				</li>
-				<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]</xpath>
-				<value>
-				<weaponTags/><weaponTags/>
-				</value>
-				</li>
-			</operations>
-			</li>			
+			</li>		
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]/weaponTags</xpath>
+				<xpath>Defs/ThingDef[defName="GD_Sabertooth"]</xpath>
 				<value>
-					<li>CE_OneHandedWeapon</li>
+					<weaponTags> 
+						<li>CE_OneHandedWeapon</li> 
+					</weaponTags>
 				</value>
 			</li>
 
@@ -195,23 +168,9 @@
 					</equippedStatOffsets>
 				</value>
 			</li>
-			<li Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="YP_BingJu"]/weaponTags</xpath>
-				<success>Invert</success>
-				</li>
-				<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="YP_BingJu"]</xpath>
-				<value>
-				<weaponTags/><weaponTags/>
-				</value>
-				</li>
-			</operations>
-			</li>
 
 			<!-- JI Assault Hammer -->			
+			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="JI_Ormbane"]/tools</xpath>
 				<value>
@@ -236,104 +195,10 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="JI_Ormbane"]</xpath>
+				<xpath>Defs/ThingDef[defName="JI_Ormbane"]/equippedStatOffsets</xpath>
 				<value>
-					<equippedStatOffsets>
-						<MeleeCritChance>0.5</MeleeCritChance>
-						<MeleeParryChance>0.3</MeleeParryChance>
-					</equippedStatOffsets>
-				</value>
-			</li>
-			<li Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="JI_Ormbane"]/weaponTags</xpath>
-				<success>Invert</success>
-				</li>
-				<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="JI_Ormbane"]</xpath>
-				<value>
-				<weaponTags/><weaponTags/>
-				</value>
-				</li>
-			</operations>
-			</li>
-
-			<!-- Torch Sword-->			
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/tools</xpath>
-				<value>
-					<tools>
-						<li Class="CombatExtended.ToolCE">
-							<label>handle</label>
-							<capacities>
-								<li>Blunt</li>
-							</capacities>
-							<power>6</power>
-							<cooldownTime>1.8</cooldownTime>
-							<armorPenetration>0.085</armorPenetration>
-							<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
-						</li>
-						<li Class="CombatExtended.ToolCE">
-							<label>point</label>
-							<capacities>
-								<li>Stab</li>
-							</capacities>
-							<power>14.7</power>
-							<cooldownTime>1.8</cooldownTime>
-							<chanceFactor>1.1</chanceFactor>
-							<armorPenetration>0.275</armorPenetration>
-							<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
-						</li>
-						<li Class="CombatExtended.ToolCE">
-							<label>edge</label>
-							<capacities>
-								<li>Cut</li>
-							</capacities>
-							<power>21</power>
-							<cooldownTime>1.8</cooldownTime>
-							<chanceFactor>1.33</chanceFactor>
-							<armorPenetration>0.188</armorPenetration>
-							<linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
-						</li>						
-					</tools>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/statBases</xpath>
-				<value>
-					<Bulk>3.6</Bulk>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]</xpath>
-				<value>
-					<equippedStatOffsets>
-						<MeleeCritChance>0.55</MeleeCritChance>
-						<MeleeParryChance>0.36</MeleeParryChance>
-					</equippedStatOffsets>
-				</value>
-			</li>
-			<li Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/weaponTags</xpath>
-				<success>Invert</success>
-				</li>
-				<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]</xpath>
-				<value>
-				<weaponTags/><weaponTags/>
-				</value>
-				</li>
-			</operations>
-			</li>			
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="MeleeWeapon_TorchSword"]/weaponTags</xpath>
-				<value>
-					<li>CE_OneHandedWeapon</li>
+					<MeleeCritChance>0.5</MeleeCritChance>
+					<MeleeParryChance>0.3</MeleeParryChance>
 				</value>
 			</li>
 
@@ -383,34 +248,20 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="TE_Eris"]/equippedStatOffsets</xpath>
+				<value>
+					<MeleeCritChance>0.28</MeleeCritChance>
+					<MeleeParryChance>0.3</MeleeParryChance>
+				</value>
+			</li>		
+			<li Class="PatchOperationAdd">
 				<xpath>Defs/ThingDef[defName="TE_Eris"]</xpath>
 				<value>
-					<equippedStatOffsets>
-						<MeleeCritChance>0.28</MeleeCritChance>
-						<MeleeParryChance>0.3</MeleeParryChance>
-					</equippedStatOffsets>
+					<weaponTags>
+					<li>CE_OneHandedWeapon</li>
+					</weaponTags>
 				</value>
 			</li>
-			<li Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationTest">
-				<xpath>Defs/ThingDef[defName="TE_Eris"]/weaponTags</xpath>
-				<success>Invert</success>
-				</li>
-				<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="TE_Eris"]</xpath>
-				<value>
-				<weaponTags/><weaponTags/>
-				</value>
-				</li>
-			</operations>
-			</li>			
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName="TE_Eris"]/weaponTags</xpath>
-				<value>
-					<li>CE_OneHandedWeapon</li>
-				</value>
-			</li>			
+		</operations>
 	</Operation>
 </Patch>
