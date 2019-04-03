@@ -7,7 +7,21 @@
 				<modName>Rimsenal</modName>
 			</li>
 			
-			<!-- ==========  Add smoke grenade =========== -->
+			<!-- ==========  Add Carbon Crystal Ammo Category =========== -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<CombatExtended.AmmoCategoryDef>
+					<defName>CarbonCrystal</defName>
+					<label>carbon crystal</label>
+					<labelShort>CC</labelShort>
+					<description>The carbon crystal core shatters into sharp splinter that maximize flesh damage but produces less armor penetration.</description>
+					</CombatExtended.AmmoCategoryDef>
+				</value>
+			</li>
+			
+			<!-- ==========  Add 40x46mm smoke grenade =========== -->
 			
 			<li Class="PatchOperationAdd">
 				<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_40x46mmGrenade"]/ammoTypes</xpath>
@@ -97,7 +111,196 @@
 				<CombatExtended.AmmoCategoryDef>
 					<defName>GrenadeSmoke</defName>
 					<label>Smoke</label>
-					<description>Smoke grendade for use in greande launhers.</description>
+					<description>Smoke grenade for use in grenade launchers.</description>
+					<advanced>true</advanced>
+				 </CombatExtended.AmmoCategoryDef>
+				 </value>
+			</li>
+			
+			<!-- ==========  Add 40x46mm incendiary grenade =========== -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_40x46mmGrenade"]/ammoTypes</xpath>
+				<value><Ammo_40x46mmGrenade_IN>Bullet_40x46mmGrenade_IN</Ammo_40x46mmGrenade_IN></value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<ThingDef Class="CombatExtended.AmmoDef" ParentName="40x46mmGrenadeBase">
+						<defName>Ammo_40x46mmGrenade_IN</defName>
+						<label>40x46mm grenade (Incendiary)</label>
+						<graphicData>
+							<texPath>Things/Ammo/GrenadeLauncher/IN</texPath>
+							<graphicClass>Graphic_StackCount</graphicClass>
+						</graphicData>
+						<statBases>
+							<MarketValue>2.46</MarketValue>
+						</statBases>
+						<ammoClass>GrenadeIncendiary</ammoClass>
+					</ThingDef>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x46mmGrenadeBullet">
+						<defName>Bullet_40x46mmGrenade_IN</defName>
+						<label>40x46mm grenade (Incendiary)</label>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+							<explosionRadius>2.5</explosionRadius>
+							<damageDef>PrometheumFlame</damageDef>
+							<damageAmountBase>15</damageAmountBase>
+							<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+						</projectile>
+					</ThingDef>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<RecipeDef ParentName="AmmoRecipeBase">
+						<defName>MakeAmmo_40x46mmGrenade_IN</defName>
+						<label>make 40x46mm Incendiary grenades x50</label>
+						<description>Craft 50 40x46mm Incendiary grenades.</description>
+						<jobString>Making 40x46mm Incendiary grenades.</jobString>
+						<ingredients>
+							<li>
+								<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+								</filter>
+								<count>16</count>
+							</li>
+							<li>
+								<filter>
+								<thingDefs>
+									<li>Prometheum</li>
+								</thingDefs>
+								</filter>
+								<count>10</count>
+							  </li>
+							<li>
+								<filter>
+								<thingDefs>
+									<li>ComponentIndustrial</li>
+								</thingDefs>
+								</filter>
+								<count>5</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Steel</li>
+								<li>Prometheum</li>
+								<li>ComponentIndustrial</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<Ammo_40x46mmGrenade_IN>50</Ammo_40x46mmGrenade_IN>
+						</products>
+					</RecipeDef>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+				<CombatExtended.AmmoCategoryDef>
+					<defName>GrenadeIncendiary</defName>
+					<label>Incendiary</label>
+					<description>Incendiary grenade for use in grenade launchers.</description>
+					<advanced>true</advanced>
+				 </CombatExtended.AmmoCategoryDef>
+				 </value>
+			</li>
+			
+			<!-- ==========  Add 40x46mm Buck Shot =========== -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_40x46mmGrenade"]/ammoTypes</xpath>
+				<value><Ammo_40x46mmGrenade_BS>Bullet_40x46mmGrenade_BS</Ammo_40x46mmGrenade_BS></value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<ThingDef Class="CombatExtended.AmmoDef" ParentName="40x46mmGrenadeBase">
+						<defName>Ammo_40x46mmGrenade_BS</defName>
+						<label>40x46mm grenade (Buckshot)</label>
+						<graphicData>
+							<texPath>Things/Ammo/GrenadeLauncher/BS</texPath>
+							<graphicClass>Graphic_StackCount</graphicClass>
+						</graphicData>
+						<statBases>
+							<MarketValue>1.6</MarketValue>
+						</statBases>
+						<ammoClass>GrenadeBS</ammoClass>
+					</ThingDef>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base12GaugeBullet">
+						<defName>Bullet_40x46mmGrenade_BS</defName>
+						<label>40x46mm grenade (Buckshot)</label>
+						<graphicData>
+							<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+							<graphicClass>Graphic_Single</graphicClass>
+						</graphicData>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+							<damageAmountBase>7</damageAmountBase>
+							<pelletCount>45</pelletCount>
+							<armorPenetrationBase>0.227</armorPenetrationBase>
+							<spreadMult>22</spreadMult>
+						</projectile>
+					</ThingDef>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+					<RecipeDef ParentName="AmmoRecipeBase">
+						<defName>MakeAmmo_40x46mmGrenade_BS</defName>
+						<label>make 40x46mm Buckshot grenades x50</label>
+						<description>Craft 50 40x46mm Buckshot grenades.</description>
+						<jobString>Making 40x46mm Buckshot grenades.</jobString>
+						<ingredients>
+							<li>
+								<filter>
+								<thingDefs>
+									<li>Steel</li>
+								</thingDefs>
+								</filter>
+								<count>36</count>
+							</li>
+							<li>
+								<filter>
+								<thingDefs>
+									<li>ComponentIndustrial</li>
+								</thingDefs>
+								</filter>
+								<count>2</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>Steel</li>
+								<li>ComponentIndustrial</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<Ammo_40x46mmGrenade_BS>50</Ammo_40x46mmGrenade_BS>
+						</products>
+					</RecipeDef>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs</xpath>
+				<value>
+				<CombatExtended.AmmoCategoryDef>
+					<defName>GrenadeBS</defName>
+					<label>Buckshot</label>
+					<description>Buckshot grenade for use in grenade launchers.</description>
 					<advanced>true</advanced>
 				 </CombatExtended.AmmoCategoryDef>
 				 </value>

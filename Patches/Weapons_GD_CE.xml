@@ -114,43 +114,10 @@
 					<li>CE_AI_Pistol</li>
 					<li>CE_OneHandedWeapon</li>
 				</weaponTags>					
-				</value>
 			</li>
+			
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/thingDef[defName="GD_MSSS"]/verbs</xpath>
-				<value>
-					<verbs>
-					<li Class="CombatExtended.VerbPropertiesCE">
-						<recoilAmount>1.17</recoilAmount>
-						<verbClass>CombatExtended.Verb_ShootCE</verbClass>
-						<hasStandardCommand>true</hasStandardCommand>
-						<defaultProjectile>Bullet_380ACP_FMJ</defaultProjectile>
-						<warmupTime>0.6</warmupTime>
-						<burstShotCount>5</burstShotCount>
-						<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
-						<range>12</range>
-						<soundCast>ShotLynx</soundCast>
-						<soundCastTail>GunTail_Light</soundCastTail>
-						<muzzleFlashScale>9</muzzleFlashScale>
-					</li>
-					</verbs>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/thingDef[defName="GD_MSSS"]</xpath>
-					<value>
-					<comps>
-					  <li Class="CombatExtended.CompProperties_AmmoUser">
-						<magazineSize>12</magazineSize>
-						<reloadTime>4</reloadTime>
-						<ammoSet>AmmoSet_380ACP</ammoSet>
-					  </li>
-					  <li Class="CombatExtended.CompProperties_FireModes" />
-					</comps>
-					</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/thingDef[defName="GD_MSSS"]/tools</xpath>
+				<xpath>Defs/ThingDef[defName="GD_MSSS"]/tools</xpath>
 				<value>
 					<tools>
 						<li Class="CombatExtended.ToolCE">
@@ -645,14 +612,14 @@
 			</AmmoUser>
 			<FireModes>
 				<aimedBurstShotCount>3</aimedBurstShotCount>
-			<FireModes>
+			</FireModes>
 			<weaponTags>
 				<li>CE_SMG</li>
 				<li>CE_AI_AssaultWeapon</li>
 			</weaponTags>
 			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/thingDef[defName="GD_HVSMG"]/tools</xpath>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="GD_HVSMG"]</xpath>
 				<value>
 					<tools>
 						<li Class="CombatExtended.ToolCE">
@@ -765,25 +732,6 @@
 						</li>
 					</tools>
 				</value>
-			</li>
-
-
-			<!-- ==========  GD Multi Launcher - Incendiary  =========== -->
-			
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/thingDef[defName="GD_INGrenadeLauncher"]</xpath>
-			</li>			
-
-			<!-- ==========  GD Multi Launcher - Smoke  =========== -->
-			
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/thingDef[defName="GD_SKGrenadeLauncher"]</xpath>
-			</li>
-
-			<!-- ==========  GD Multi Launcher - Shotgun  =========== -->
-
-			<li Class="PatchOperationRemove">
-				<xpath>Defs/thingDef[defName="GD_BSLauncher"]</xpath>
 			</li>
 			
 		</operations>
