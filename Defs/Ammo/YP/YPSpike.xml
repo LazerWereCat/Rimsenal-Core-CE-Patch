@@ -39,7 +39,7 @@
 		<defName>Ammo_SpikeYP_CC</defName>
 		<label>7.62x55mm YP cartridge (CC)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rifle/YP</texPath>
+			<texPath>Things/Ammo/YP</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
