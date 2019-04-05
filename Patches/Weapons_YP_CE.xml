@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success></success>
+		<operations>
+			<li Class="CombatExtended.PatchOperationFindMod">
+				<modName>Rimsenal</modName>
+			</li>
+			
+			<!-- ==========  YP Shard Rifle =========== -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_SeoLi"]/description</xpath>
+				<value><description>Compared to a conventional assault rifle, the Yunwha Precision 'Seoli(Frost)' Shard Rifle is equipped with a larger clip and a higher rate of fire.</description></value>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>YP_SeoLi</defName>
+				<statBases>
+					<WorkToMake>48500</WorkToMake>
+					<SightsEfficiency>1.0</SightsEfficiency>
+					<ShotSpread>0.14</ShotSpread>
+					<SwayFactor>1.21</SwayFactor>
+					<Bulk>8.20</Bulk>
+					<Mass>3.12</Mass>
+					<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>1.48</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_RifleYP_CC</defaultProjectile>
+					<warmupTime>0.6</warmupTime>
+					<burstShotCount>5</burstShotCount>
+					<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+					<range>55</range>
+					<soundCast>RS_ShotShard</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<muzzleFlashScale>4</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>40</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_RifleYP</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aimedBurstShotCount>3</aimedBurstShotCount>
+					<aiUseBurstMode>TRUE</aiUseBurstMode>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_SeoLi"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>stock</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>9</power>
+							<cooldownTime>1.8</cooldownTime>
+							<chanceFactor>1.5</chanceFactor>
+							<armorPenetration>0.11</armorPenetration>
+							<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>barrel</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>muzzle</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<!-- ==========  YP Swarmer =========== -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_SagPung"]/description</xpath>
+				<value><description>The Yunhwa Precision 'SagPung(Boreas)' swarmer is the combination of the Vector Shot and the Shard Rifle. It has a GuidedRailSystem™ just like the Vector Shot which makes it incredibly accurate. It is an ideal tool for dealing with soft targets at sub rifle range.</description></value>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>YP_SagPung</defName>
+				<statBases>
+					<WorkToMake>42500</WorkToMake>
+					<SightsEfficiency>1.0</SightsEfficiency>
+					<ShotSpread>0.0</ShotSpread>
+					<SwayFactor>0.91</SwayFactor>
+					<Bulk>9.70</Bulk>
+					<Mass>2.85</Mass>
+					<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>1.37</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_RifleYP_CC</defaultProjectile>
+					<warmupTime>1.1</warmupTime>
+					<burstShotCount>5</burstShotCount>
+					<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+					<range>32</range>
+					<soundCast>RS_ShotSwarm</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<muzzleFlashScale>9</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>25</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_RifleYP</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aimedBurstShotCount>5</aimedBurstShotCount>
+					<aiAimMode>AimedShot</aiAimMode>
+					<aiUseBurstMode>TRUE</aiUseBurstMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_SagPung"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>grip</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.6</cooldownTime>
+							<chanceFactor>1.5</chanceFactor>
+							<armorPenetration>0.102</armorPenetration>
+							<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>barrel</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.6</cooldownTime>
+							<armorPenetration>0.102</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>muzzle</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.6</cooldownTime>
+							<armorPenetration>0.075</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<!-- ==========  YP Spike Rifle =========== -->
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>YP_SangAe</defName>
+				<statBases>
+					<WorkToMake>55500</WorkToMake>
+					<SightsEfficiency>1.86</SightsEfficiency>
+					<ShotSpread>0.04</ShotSpread>
+					<SwayFactor>1.52</SwayFactor>
+					<Bulk>12.20</Bulk>
+					<Mass>3.30</Mass>
+					<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_SpikeYP_CC</defaultProjectile>
+					<warmupTime>1.3</warmupTime>
+					<range>75</range>
+					<soundCast>RS_ShotSpike</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>8</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>8</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_SpikeYP</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aiUseBurstMode>FALSE</aiUseBurstMode>
+					<aiAimMode>AimedShot</aiAimMode>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_SangAe"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>stock</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>9</power>
+							<cooldownTime>1.8</cooldownTime>
+							<chanceFactor>1.5</chanceFactor>
+							<armorPenetration>0.11</armorPenetration>
+							<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>barrel</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>muzzle</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<!-- ==========  YP Dual Wield Shard Pistols =========== -->
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>YP_SeolHwa</defName>
+				<statBases>
+					<WorkToMake>50500</WorkToMake>
+					<SightsEfficiency>0.7</SightsEfficiency>
+					<ShotSpread>0.0</ShotSpread>
+					<SwayFactor>1</SwayFactor>
+					<Bulk>2.50</Bulk>
+					<Mass>2.32</Mass>
+					<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>1.74</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_PistolYP_CC</defaultProjectile>
+					<warmupTime>0.6</warmupTime>
+					<burstShotCount>2</burstShotCount>
+					<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+					<range>12</range>
+					<soundCast>RS_ShotShard</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<muzzleFlashScale>3</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>12</magazineSize>
+					<reloadTime>4</reloadTime>
+					<ammoSet>AmmoSet_PistolYP</ammoSet>
+				</AmmoUser>
+				<FireModes>
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_SeolHwa"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>grip</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.75</cooldownTime>
+							<chanceFactor>1.5</chanceFactor>
+							<armorPenetration>0.11</armorPenetration>
+							<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>barrel</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.6</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<!-- ==========  YP Microwave Emmiter =========== -->
+			
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>YP_GeugGwang</defName>
+				<statBases>
+					<WorkToMake>42500</WorkToMake>
+					<SightsEfficiency>1.0</SightsEfficiency>
+					<ShotSpread>0.0</ShotSpread>
+					<SwayFactor>1.21</SwayFactor>
+					<Bulk>8.70</Bulk>
+					<Mass>3.12</Mass>
+					<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>1.17</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_GeugGwang</defaultProjectile>
+					<warmupTime>0.6</warmupTime>
+					<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+					<range>80</range>
+					<soundCast>RS_ShotBoreas</soundCast>
+					<soundCastTail>GunTail_Medium</soundCastTail>
+					<muzzleFlashScale>14</muzzleFlashScale>
+				</Properties>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_GeugGwang"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>stock</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>9</power>
+							<cooldownTime>1.8</cooldownTime>
+							<chanceFactor>1.5</chanceFactor>
+							<armorPenetration>0.11</armorPenetration>
+							<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>barrel</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.118</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>muzzle</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.9</cooldownTime>
+							<armorPenetration>0.086</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ThingDef[defName="YP_GeugGwang"]</xpath>
+			</li>
+			
+			<!-- ==========  YP Vector Shot =========== -->
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_VectorShot"]/description</xpath>
+				<value><description>"NuRi(Hail)" vector shot is a weapon for urban warfare, uses an integrated GuidedRailSystem™ which makes the bullets extremely accurate. The bottom base of the weapon is fitted with advanced gyromotors for recoil reduction. Due to the extremely short range at which the recoil reduction can be used at NuRi's function is limited to an assault specialist weapon.</description></value>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>YP_VectorShot</defName>
+				<statBases>
+					<WorkToMake>58500</WorkToMake>
+					<SightsEfficiency>1.0</SightsEfficiency>
+					<ShotSpread>0.0</ShotSpread>
+					<SwayFactor>0.89</SwayFactor>
+					<Bulk>4.20</Bulk>
+					<Mass>2.80</Mass>
+					<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+				</statBases>
+				<Properties>
+					<recoilAmount>1.24</recoilAmount>
+					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>Bullet_PistolYP_CC</defaultProjectile>
+					<warmupTime>0.6</warmupTime>
+					<burstShotCount>5</burstShotCount>
+					<ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+					<range>14</range>
+					<soundCast>RS_ShotShard</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<muzzleFlashScale>10</muzzleFlashScale>
+				</Properties>
+				<AmmoUser>
+					<magazineSize>30</magazineSize>
+					<reloadTime>2.5</reloadTime>
+					<ammoSet>AmmoSet_PistolYP</ammoSet>
+				</AmmoUser>
+				<FireModes>
+					<aimedBurstShotCount>5</aimedBurstShotCount>				
+				</FireModes>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="YP_VectorShot"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>grip</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.6</cooldownTime>
+							<chanceFactor>1.5</chanceFactor>
+							<armorPenetration>0.102</armorPenetration>
+							<linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>barrel</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.6</cooldownTime>
+							<armorPenetration>0.102</armorPenetration>
+							<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>muzzle</label>
+							<capacities>
+								<li>Poke</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.6</cooldownTime>
+							<armorPenetration>0.075</armorPenetration>
+							<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+						</li>
+					</tools>
+				</value>
+			</li>
+			
+			</operations>
+	</Operation>
+</Patch>
