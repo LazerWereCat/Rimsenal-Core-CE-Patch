@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationSequence">
-		<success></success>
+		<success>Always</success>
 		<operations>
 			<li Class="CombatExtended.PatchOperationFindMod">
 				<modName>Rimsenal</modName>
 			</li>
 
+	<!-- ========== Remove Recipe Maker & Verbs ========== -->			
+	<li Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="YP_BaegYa" or defName="JI_Dunder" or defName="GD_Bobcat" or defName="TE_Grief" or @Name="BaseRSGrenade"]/recipeMaker</xpath>
+	</li>		
+
+	<li Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="YP_BaegYa" or defName="JI_Dunder" or defName="GD_Bobcat" or defName="TE_Grief"]/costList</xpath>
+	</li>			
+
+	<!-- Without this mod, Grief and Bobcat don't work, and it logs at ForcedMissRadius error.-->
+	<li Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[defName="YP_BaegYa" or defName="JI_Dunder" or defName="GD_Bobcat" or defName="TE_Grief"]/verbs</xpath>
+	</li>		
+	
 	<!-- ========== Projectile thingClass ========== -->
 
 	<li Class="PatchOperationReplace">
@@ -43,13 +57,13 @@
 		<xpath>Defs/ThingDef[defName="Proj_BaegYa"]/projectile</xpath>
 		<value>
 			<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			  <explosionRadius>1.5</explosionRadius>
-			  <damageDef>Bomb</damageDef>
-			  <damageAmountBase>50</damageAmountBase>
-			  <explosionDelay>60</explosionDelay>
+			  <explosionRadius>4</explosionRadius>
+			  <damageDef>Microwave</damageDef>
+			  <damageAmountBase>1</damageAmountBase>
+			  <explosionDelay>50</explosionDelay>
 			  <dropsCasings>true</dropsCasings>
 			  <casingMoteDefname>Mote_GrenadePin</casingMoteDefname>
-      	<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			  <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</projectile>
 		</value>
 	</li>	
@@ -58,13 +72,13 @@
 		<xpath>Defs/ThingDef[defName="Proj_Dunder"]/projectile</xpath>
 		<value>
 			<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			  <explosionRadius>1.5</explosionRadius>
+			  <explosionRadius>4.5</explosionRadius>
 			  <damageDef>Bomb</damageDef>
-			  <damageAmountBase>50</damageAmountBase>
-			  <explosionDelay>60</explosionDelay>
+			  <damageAmountBase>200</damageAmountBase>
+			  <explosionDelay>500</explosionDelay>
 			  <dropsCasings>true</dropsCasings>
 			  <casingMoteDefname>Mote_GrenadePin</casingMoteDefname>
-      	<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			  <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</projectile>
 		</value>
 	</li>	
@@ -73,13 +87,13 @@
 		<xpath>Defs/ThingDef[defName="Proj_Bobcat"]/projectile</xpath>
 		<value>
 			<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			  <explosionRadius>1.5</explosionRadius>
+			  <explosionRadius>1</explosionRadius>
 			  <damageDef>Bomb</damageDef>
-			  <damageAmountBase>50</damageAmountBase>
-			  <explosionDelay>60</explosionDelay>
+			  <damageAmountBase>10</damageAmountBase>
+			  <explosionDelay>80</explosionDelay>
 			  <dropsCasings>true</dropsCasings>
 			  <casingMoteDefname>Mote_GrenadePin</casingMoteDefname>
-      	<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			  <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</projectile>
 		</value>
 	</li>	
@@ -88,11 +102,12 @@
 		<xpath>Defs/ThingDef[defName="Proj_Grief"]/projectile</xpath>
 		<value>
 			<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			  <explosionRadius>1.5</explosionRadius>
-			  <damageDef>Bomb</damageDef>
-			  <damageAmountBase>50</damageAmountBase>
-			  <explosionDelay>60</explosionDelay>
+			  <explosionRadius>4</explosionRadius>
+			  <damageDef>KineticImpact</damageDef>
+			  <damageAmountBase>10</damageAmountBase>
+			  <explosionDelay>80</explosionDelay>
 			  <dropsCasings>true</dropsCasings>
+			  <speed>10</speed>
 			  <casingMoteDefname>Mote_GrenadePin</casingMoteDefname>
       	<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</projectile>
@@ -103,7 +118,7 @@
 
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="Proj_BaegYa"]/comps</xpath>
       	<success>Invert</success>
@@ -119,7 +134,7 @@
 
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="Proj_Dunder"]/comps</xpath>
       	<success>Invert</success>
@@ -135,7 +150,7 @@
 
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="Proj_Bobcat"]/comps</xpath>
       	<success>Invert</success>
@@ -151,7 +166,7 @@
 	
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="Proj_Grief"]/comps</xpath>
       	<success>Invert</success>
@@ -172,7 +187,7 @@
 		<value>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
 			  <fragments>
-			    <Fragment_GrenadeFrag>250</Fragment_GrenadeFrag>
+			    <Fragment_GrenadeFrag>0</Fragment_GrenadeFrag>
 			  </fragments>
 			</li>
 		</value>
@@ -183,7 +198,7 @@
 		<value>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
 			  <fragments>
-			    <Fragment_GrenadeFrag>250</Fragment_GrenadeFrag>
+			    <Fragment_GrenadeFrag>0</Fragment_GrenadeFrag>
 			  </fragments>
 			</li>
 		</value>
@@ -194,7 +209,7 @@
 		<value>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
 			  <fragments>
-			    <Fragment_GrenadeFrag>250</Fragment_GrenadeFrag>
+			    <Fragment_GrenadeFrag>85</Fragment_GrenadeFrag>
 			  </fragments>
 			</li>
 		</value>
@@ -205,7 +220,7 @@
 		<value>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
 			  <fragments>
-			    <Fragment_GrenadeFrag>250</Fragment_GrenadeFrag>
+			    <Fragment_GrenadeFrag>0</Fragment_GrenadeFrag>
 			  </fragments>
 			</li>
 		</value>
@@ -213,14 +228,10 @@
 	
 	<!-- Weapon Stack and Appearance -->
 
-	<li Class="PatchOperationReplace">
+	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="YP_BaegYa"]/graphicData</xpath>
 		<value>
-			<graphicData>
-			  <texPath>Things/Ammo/HandGrenades/Frag</texPath>
-			  <graphicClass>Graphic_StackCount</graphicClass>
 			  <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
-			</graphicData>
 		</value>
 	</li>
 
@@ -239,14 +250,10 @@
 		<value>CombatExtended.AmmoDef</value>
 	</li>
 
-	<li Class="PatchOperationReplace">
+	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="JI_Dunder"]/graphicData</xpath>
 		<value>
-			<graphicData>
-			  <texPath>Things/Ammo/HandGrenades/Frag</texPath>
-			  <graphicClass>Graphic_StackCount</graphicClass>
 			  <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
-			</graphicData>
 		</value>
 	</li>
 
@@ -265,14 +272,10 @@
 		<value>CombatExtended.AmmoDef</value>
 	</li>	
 
-	<li Class="PatchOperationReplace">
+	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="GD_Bobcat"]/graphicData</xpath>
 		<value>
-			<graphicData>
-			  <texPath>Things/Ammo/HandGrenades/Frag</texPath>
-			  <graphicClass>Graphic_StackCount</graphicClass>
 			  <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
-			</graphicData>
 		</value>
 	</li>
 
@@ -291,14 +294,10 @@
 		<value>CombatExtended.AmmoDef</value>
 	</li>
 
-	<li Class="PatchOperationReplace">
+	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="TE_Grief"]/graphicData</xpath>
 		<value>
-			<graphicData>
-			  <texPath>Things/Ammo/HandGrenades/Frag</texPath>
-			  <graphicClass>Graphic_StackCount</graphicClass>
 			  <onGroundRandomRotateAngle>0</onGroundRandomRotateAngle>
-			</graphicData>
 		</value>
 	</li>
 
@@ -321,7 +320,7 @@
 	
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="YP_BaegYa"]/comps</xpath>
       	<success>Invert</success>
@@ -337,7 +336,7 @@
 
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="JI_Dunder"]/comps</xpath>
       	<success>Invert</success>
@@ -353,7 +352,7 @@
 
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="GD_Bobcat"]/comps</xpath>
       	<success>Invert</success>
@@ -369,7 +368,7 @@
 
 	<li Class="PatchOperationSequence">
   	<success>Always</success>
-  	<lis>
+  	<operations>
     	<li Class="PatchOperationTest">
       	<xpath>Defs/ThingDef[defName="TE_Grief"]/comps</xpath>
       	<success>Invert</success>
@@ -408,7 +407,7 @@
 			<SightsEfficiency>1</SightsEfficiency>
     </statBases>
     <Properties>
-    	<label>throw frag grenade</label>
+    	<label>throw microwave grenade</label>
     	<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
     	<hasStandardCommand>true</hasStandardCommand>
     	<range>10.0</range>
@@ -453,7 +452,7 @@
 			<SightsEfficiency>1</SightsEfficiency>
     </statBases>
     <Properties>
-    	<label>throw frag grenade</label>
+    	<label>throw satchel charge</label>
     	<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
     	<hasStandardCommand>true</hasStandardCommand>
     	<range>10.0</range>
@@ -496,9 +495,10 @@
 			<MarketValue>5.25</MarketValue>
 			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 			<SightsEfficiency>1</SightsEfficiency>
+			<ShotSpread>1.0</ShotSpread>
     </statBases>
     <Properties>
-    	<label>throw frag grenade</label>
+    	<label>throw mini grenades</label>
     	<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
     	<hasStandardCommand>true</hasStandardCommand>
     	<range>10.0</range>
@@ -507,6 +507,8 @@
     	<noiseRadius>4</noiseRadius>
     	<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
     	<soundCast>ThrowGrenade</soundCast>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>3</ticksBetweenBurstShots>		
     	<targetParams>
     	  <canTargetLocations>true</canTargetLocations>
     	</targetParams>
@@ -543,7 +545,7 @@
 			<SightsEfficiency>1</SightsEfficiency>
     </statBases>
     <Properties>
-    	<label>throw frag grenade</label>
+    	<label>throw impact grenade</label>
     	<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
     	<hasStandardCommand>true</hasStandardCommand>
     	<range>10.0</range>
