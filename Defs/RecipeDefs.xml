@@ -1,12 +1,19 @@
-<?xml version="1.0" encoring="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
 <RecipeDef Name="RSExplosive_RecipeBase" Abstract="true">
 <workSpeedStat>SmithingSpeed</workSpeedStat>
 <effectWorking>Cook</effectWorking>
-<soundWorking>Recipe_Cook</soundWorking>
+<soundWorking>Recipe_Smith</soundWorking>
 <workSkill>Crafting</workSkill>
 <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+<fixedIngredientFilter>
+	<thingDefs>
+	<li>Plasteel</li>
+	<li>ComponentIndustrial</li>
+	<li>FSX</li>
+	</thingDefs>
+</fixedIngredientFilter>
 </RecipeDef>
 
 <!-- YP BaegYa Microwave Grenades -->
@@ -27,7 +34,7 @@
     <li>
 		<filter>
 		<thingDefs>
-		<li>Plateel</li>
+		<li>Plasteel</li>
 		</thingDefs>
 		</filter>
 		<count>5</count>
@@ -45,13 +52,6 @@
       <skillRequirements>
         <Crafting>9</Crafting>
       </skillRequirements>
-<fixedIngredientsFilter>
-<thingDefs>
-<li>Plasteel</li>
-<li>Componentindustrial</li>
-<li>FSX</li>
-</thingDefs>
-</fixedIngredientsFilter>
 <products>
 	<YP_BaegYa>10</YP_BaegYa>
 </products>
@@ -98,13 +98,6 @@
       <skillRequirements>
         <Crafting>9</Crafting>
       </skillRequirements>
-<fixedIngredientsFilter>
-<thingDefs>
-<li>Steel</li>
-<li>Componentindustrial</li>
-<li>FSX</li>
-</thingDefs>
-</fixedIngredientsFilter>
 <products>
 <JI_Dunder>10</JI_Dunder>
 </products>
@@ -148,15 +141,8 @@
     </li>        
 </ingredients>
       <researchPrerequisite>DefenceTech</researchPrerequisite>
-<fixedIngredientsFilter>
-<thingDefs>
-<li>Plateel</li>
-<li>Componentindustrial</li>
-<li>FSX</li>
-</thingDefs>
-</fixedIngredientsFilter>
 <products>
-<GD_Bobcat>10</GD_Bobcat>
+	<GD_Bobcat>10</GD_Bobcat>
 </products>
 <workAmount>20000</workAmount>
 <recipeUsers>
@@ -201,13 +187,6 @@
       <skillRequirements>
         <Crafting>9</Crafting>
       </skillRequirements>
-<fixedIngredientsFilter>
-<thingDefs>
-<li>Steel</li>
-<li>Componentindustrial</li>
-<li>FSX</li>
-</thingDefs>
-</fixedIngredientsFilter>
 <products>
 <TE_Grief>10</TE_Grief>
 </products>
