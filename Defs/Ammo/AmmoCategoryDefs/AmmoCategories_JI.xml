@@ -10,21 +10,21 @@
   
     <CombatExtended.AmmoCategoryDef>
     <defName>HDSlug</defName>
-    <label>high density slug</label>
+    <label>high-density alloy slug</label>
     <labelShort>HDS</labelShort>
     <description>A dense alloy slug heated nearly to the melting point. intended to defeat heavy armor.</description>
   </CombatExtended.AmmoCategoryDef>
 
   <CombatExtended.AmmoCategoryDef>
     <defName>Slag</defName>
-    <label>slag</label>
+    <label>slag round</label>
     <labelShort>SG</labelShort>
     <description>Loose, white-hot alloy pelts.</description>
   </CombatExtended.AmmoCategoryDef>
 
   <CombatExtended.AmmoCategoryDef>
     <defName>RocketHEDP</defName>
-    <label>high-explosive dual purpose</label>
+    <label>90mm rocket (HEDP)</label>
     <labelShort>HEDP</labelShort>
     <description>A rocket with an explosive casing around s shaped-charge core, useful against a variety of threats.</description>
   </CombatExtended.AmmoCategoryDef>

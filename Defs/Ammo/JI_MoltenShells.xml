@@ -3,18 +3,18 @@
 
 	<ThingCategoryDef>
 		<defName>AmmoMoltenSlug</defName>
-		<label>Machined Alloy Slug</label>
+		<label>Molten Slug</label>
 		<parent>AmmoRifles</parent>
-    <iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+    <iconPath>Things/RS_UI/Molten</iconPath>
 	</ThingCategoryDef>
 	
 	<!-- ==================== AmmoSet ========================== -->
 
 	<CombatExtended.AmmoSetDef>
 		<defName>AmmoSet_JIStandard</defName>
-		<label>JI Machined Alloy Slugs</label>
+		<label>molten slug</label>
 		<ammoTypes>
-			<Ammo_JI_Slug>Bullet_JI_Slug</Ammo_JI_Slug>
+			<Ammo_JI_Molten>Bullet_JI_Molten</Ammo_JI_Molten>
  		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 	
@@ -36,10 +36,10 @@
 	</ThingDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseJISlug">
-		<defName>Ammo_JI_Slug</defName>
-		<label>machined alloy slug</label>
+		<defName>Ammo_JI_Molten</defName>
+		<label>molten slug</label>
 		<graphicData>
-			<texPath>Things/Ammo/JI</texPath>
+			<texPath>Things/Ammo/JI/JI_Molten</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -63,8 +63,8 @@
 	</ThingDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseJISlugBullet">
-		<defName>Bullet_JI_Slug</defName>
-		<label>molten alloy slug</label>
+		<defName>Bullet_JI_Molten</defName>
+		<label>molten slug</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>9.5</damageAmountBase>
 				  <secondaryDamage>
@@ -80,7 +80,7 @@
 	<!-- ==================== Recipes ========================== -->
 
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeAmmo_JI_Slug</defName>
+		<defName>MakeAmmo_JI_Molten</defName>
 		<label>make machined alloy slug x500</label>
 		<description>Craft 500 machined alloy slugs.</description>
 		<jobString>Making machined alloy slugs.</jobString>
@@ -100,7 +100,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_JI_Slug>500</Ammo_JI_Slug>
+			<Ammo_JI_Molten>500</Ammo_JI_Molten>
 		</products>
 	</RecipeDef>
 	
