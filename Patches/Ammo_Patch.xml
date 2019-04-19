@@ -7,20 +7,6 @@
 				<modName>Rimsenal</modName>
 			</li>
 			
-			<!-- ==========  Add Carbon Crystal Ammo Category =========== -->
-			
-			<li Class="PatchOperationAdd">
-				<xpath>Defs</xpath>
-				<value>
-					<CombatExtended.AmmoCategoryDef>
-					<defName>CarbonCrystal</defName>
-					<label>carbon crystal</label>
-					<labelShort>CC</labelShort>
-					<description>The carbon crystal core shatters into sharp splinter that maximize flesh damage but produces less armor penetration.</description>
-					</CombatExtended.AmmoCategoryDef>
-				</value>
-			</li>
-			
 			<!-- ==========  Add 40x46mm smoke grenade =========== -->
 			
 			<li Class="PatchOperationAdd">

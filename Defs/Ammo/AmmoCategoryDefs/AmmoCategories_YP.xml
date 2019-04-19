@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>CarbonCrystal</defName>
+		<label>carbon crystal</label>
+		<labelShort>CC</labelShort>
+		<description>The carbon crystal core shatters into sharp splinter that maximize flesh damage but produces less armor penetration.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+</Defs>
