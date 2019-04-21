@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>KineticEnergy</defName>
+		<label>kinetic energy</label>
+		<labelShort>KE</labelShort>
+		<description>Special ionized electricity from the power core gets turned into a hard energy amalgam in the gun breech, the amalgam doesn't burn like normal energy projectiles, instead it deals blunt damage, hence the name kinetic energy.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+</Defs>

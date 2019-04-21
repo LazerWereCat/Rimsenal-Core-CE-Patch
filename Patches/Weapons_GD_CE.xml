@@ -26,7 +26,7 @@
 					<defaultProjectile>Bullet_380ACP_FMJ</defaultProjectile>
 					<warmupTime>0.6</warmupTime>
 					<burstShotCount>3</burstShotCount>
-					<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+					<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
 					<range>12</range>
 					<soundCast>ShotLynx</soundCast>
 					<soundCastTail>GunTail_Light</soundCastTail>
@@ -95,7 +95,7 @@
 					<defaultProjectile>Bullet_380ACP_FMJ</defaultProjectile>
 					<warmupTime>0.6</warmupTime>
 					<burstShotCount>5</burstShotCount>
-					<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+					<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
 					<range>12</range>
 					<soundCast>ShotLynx</soundCast>
 					<soundCastTail>GunTail_Light</soundCastTail>

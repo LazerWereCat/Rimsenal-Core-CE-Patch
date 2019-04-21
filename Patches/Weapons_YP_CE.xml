@@ -11,7 +11,7 @@
 			
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="YP_SeoLi"]/description</xpath>
-				<value><description>Compared to a conventional assault rifle, the Yunwha Precision 'Seoli(Frost)' Shard Rifle is equipped with a larger clip and a higher rate of fire.</description></value>
+				<value><description>Compared to a conventional assault rifle, the Yunwha Precision "Seoli(Frost)" Shard Rifle is equipped with a larger clip and a higher rate of fire.</description></value>
 			</li>
 			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>YP_SeoLi</defName>
@@ -246,7 +246,7 @@
 				<statBases>
 					<WorkToMake>50500</WorkToMake>
 					<SightsEfficiency>0.7</SightsEfficiency>
-					<ShotSpread>0.0</ShotSpread>
+					<ShotSpread>0.12</ShotSpread>
 					<SwayFactor>1</SwayFactor>
 					<Bulk>2.50</Bulk>
 					<Mass>2.32</Mass>
