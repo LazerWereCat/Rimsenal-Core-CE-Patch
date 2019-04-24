@@ -243,7 +243,7 @@
 					<recoilAmount>4.5</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_JI_AMR</defaultProjectile>
+					<defaultProjectile>Bullet_90mmJI_HEDP</defaultProjectile>
 					<warmupTime>3.8</warmupTime>
 					<range>68</range>
 					<soundCast>RS_ShotJI</soundCast>
@@ -387,6 +387,7 @@
 			</li>
 			
 			<!-- Seige Shotgun -->
+			
 			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
 				<defName>JI_Fafnir</defName>
 				<statBases>
