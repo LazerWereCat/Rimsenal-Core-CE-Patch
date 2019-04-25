@@ -66,7 +66,7 @@
 		<defName>Bullet_JI_Molten</defName>
 		<label>molten slug</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>9.5</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 				  <secondaryDamage>
 					<li>
 					  <def>Flame_Secondary</def>

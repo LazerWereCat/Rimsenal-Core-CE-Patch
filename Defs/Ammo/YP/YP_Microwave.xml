@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>			
+			
+			<!-- ==========  Add Microwave Projectile =========== -->
+			
+			<ThingDef Class="CombatExtended.AmmoDef" Name="BaseMicrowaveBullet" ParentName="BaseBullet" Abstract="true">
+				<graphicData>
+					<texPath>Things/Projectile/Microwave</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<shaderType>TransparentPostLight</shaderType>
+				</graphicData>
+				<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					<damageDef>Microwave</damageDef>
+					<speed>80</speed>
+					<dropsCasings>false</dropsCasings>
+				</projectile>
+			</ThingDef>
+
+			<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMicrowaveBullet">
+				<defName>Bullet_Microwave</defName>
+				<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+				<label>TE energy blast (KE)</label>
+				<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					<damageAmountBase>1</damageAmountBase>
+					<explosionRadius>1.5</explosionRadius>
+				</projectile>
+			</ThingDef>
+			
+</Defs>
