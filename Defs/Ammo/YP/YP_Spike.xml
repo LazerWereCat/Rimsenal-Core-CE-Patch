@@ -5,7 +5,7 @@
 		<defName>AmmoSpikeYP</defName>
 		<label>7.62x55mm YP</label>
 		<parent>AmmoRifles</parent>
-    <iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+    <iconPath>Things/RS_UI/CarbonCrystal</iconPath>
 	</ThingCategoryDef>
 	
 	<!-- ==================== AmmoSet ========================== -->

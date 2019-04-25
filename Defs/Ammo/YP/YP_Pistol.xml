@@ -5,7 +5,7 @@
 		<defName>AmmoPistolYP</defName>
 		<label>9x21mm YP</label>
 		<parent>AmmoPistols</parent>
-    <iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
+    <iconPath>Things/RS_UI/CarbonCrystal</iconPath>
 	</ThingCategoryDef>
 	
 	<!-- ==================== AmmoSet ========================== -->

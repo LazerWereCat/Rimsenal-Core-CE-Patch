@@ -5,7 +5,7 @@
 		<defName>AmmoT90Canister</defName>
 		<label>T90 Canister</label>
 		<parent>AmmoRifles</parent>
-    <iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+    <iconPath>Things/RS_UI/KineticCore</iconPath>
 	</ThingCategoryDef>
 	
 	<!-- ==================== AmmoSet ========================== -->

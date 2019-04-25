@@ -5,7 +5,7 @@
 		<defName>AmmoT101Core</defName>
 		<label>T101 Core</label>
 		<parent>AmmoRifles</parent>
-    <iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+    <iconPath>Things/RS_UI/KineticCore</iconPath>
 	</ThingCategoryDef>
 	
 	<!-- ==================== AmmoSet ========================== -->
