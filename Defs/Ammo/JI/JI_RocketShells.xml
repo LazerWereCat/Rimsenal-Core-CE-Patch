@@ -145,6 +145,10 @@
         <li>ComponentIndustrial</li>
       </thingDefs>
     </fixedIngredientFilter>
+	<researchPrerequisite>SiegeTech</researchPrerequisite>
+	<recipeUsers Inherit="False">
+		<li>JITable</li>
+	</recipeUsers>		
     <products>
       <Ammo_90mmJI_DP>5</Ammo_90mmJI_DP>
     </products>

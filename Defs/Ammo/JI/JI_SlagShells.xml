@@ -101,6 +101,10 @@
 				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<researchPrerequisite>SiegeTech</researchPrerequisite>
+		<recipeUsers Inherit="False">
+			<li>JITable</li>
+		</recipeUsers>		
 		<products>
 			<Ammo_JI_Slag>500</Ammo_JI_Slag>
 		</products>
