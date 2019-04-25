@@ -66,11 +66,11 @@
 		<defName>Bullet_JI_AMR</defName>
 		<label>machined alloy slug</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>15</damageAmountBase>
+			<damageAmountBase>49</damageAmountBase>
 				  <secondaryDamage>
 					<li>
 					  <def>Flame_Secondary</def>
-					  <amount>4</amount>
+					  <amount>12</amount>
 					</li>
 				  </secondaryDamage>			
 			<armorPenetrationBase>0.90</armorPenetrationBase>
@@ -99,6 +99,10 @@
 				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<researchPrerequisite>MoltenTech</researchPrerequisite>
+		<recipeUsers Inherit="False">
+			<li>JITable</li>
+		</recipeUsers>
 		<products>
 			<Ammo_JI_AMR>500</Ammo_JI_AMR>
 		</products>

@@ -95,6 +95,10 @@
 				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<researchPrerequisite>ShardTech</researchPrerequisite>
+		<recipeUsers Inherit="False">
+			<li>YPTable</li>
+		</recipeUsers>			
 		<products>
 			<Ammo_SpikeYP_CC>500</Ammo_SpikeYP_CC>
 		</products>

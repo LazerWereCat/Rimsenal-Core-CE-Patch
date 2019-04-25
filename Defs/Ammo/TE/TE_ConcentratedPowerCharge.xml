@@ -94,13 +94,14 @@
 				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<researchPrerequisite>KineticTech</researchPrerequisite>
+		<recipeUsers Inherit="False">
+			<li>TETable</li>
+		</recipeUsers>			
 		<products>
 			<Ammo_TEConcentratedPowerCharge_KE>500</Ammo_TEConcentratedPowerCharge_KE>
 		</products>
     <workAmount>7000</workAmount>
-	<recipeUsers>
-        <li>TETable</li>
-     </recipeUsers>
 	</RecipeDef>
 
 	
