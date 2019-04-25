@@ -87,7 +87,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>16</count>
+				<count>14</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -102,7 +102,7 @@
 		<products>
 			<Ammo_RifleYP_CC>500</Ammo_RifleYP_CC>
 		</products>
-    <workAmount>4000</workAmount>
+    <workAmount>2750</workAmount>
 	</RecipeDef>
 
 	

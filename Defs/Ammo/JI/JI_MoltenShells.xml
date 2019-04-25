@@ -81,9 +81,9 @@
 
 	<RecipeDef ParentName="AmmoRecipeBase">
 		<defName>MakeAmmo_JI_Molten</defName>
-		<label>make machined alloy slug x500</label>
-		<description>Craft 500 machined alloy slugs.</description>
-		<jobString>Making machined alloy slugs.</jobString>
+		<label>make machined alloy rounds x500</label>
+		<description>Craft 500 machined alloy rounds.</description>
+		<jobString>Making machined alloy rounds.</jobString>
 		<ingredients>
 			<li>
 				<filter>

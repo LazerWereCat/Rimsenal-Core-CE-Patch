@@ -24,7 +24,7 @@
 					<recoilAmount>1.56</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_TEPowerCharge_KE</defaultProjectile>
+					<defaultProjectile>Bullet_T55Core_KE</defaultProjectile>
 					<warmupTime>1.1</warmupTime>
 					<burstShotCount>5</burstShotCount>
 					<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
@@ -36,7 +36,7 @@
 				<AmmoUser>
 					<magazineSize>30</magazineSize>
 					<reloadTime>4</reloadTime>
-					<ammoSet>AmmoSet_TEPowerCharge</ammoSet>
+					<ammoSet>AmmoSet_T55Core</ammoSet>
 				</AmmoUser>
 				<FireModes>
 					<aimedBurstShotCount>3</aimedBurstShotCount>
@@ -99,7 +99,7 @@
 					<recoilAmount>1.8</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_TEPowerCharge_KE</defaultProjectile>
+					<defaultProjectile>Bullet_T55Core_KE</defaultProjectile>
 					<warmupTime>0.6</warmupTime>
 					<range>12</range>
 					<soundCast>ImpactM</soundCast>
@@ -109,7 +109,7 @@
 				<AmmoUser>
 					<magazineSize>12</magazineSize>
 					<reloadTime>4</reloadTime>
-					<ammoSet>AmmoSet_TEPowerCharge</ammoSet>
+					<ammoSet>AmmoSet_T55Core</ammoSet>
 				</AmmoUser>
 				<FireModes>
 				</FireModes>
@@ -160,7 +160,7 @@
 					<recoilAmount>1.48</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_TEEnergyCanister_KE</defaultProjectile>
+					<defaultProjectile>Bullet_T90Canister_KE</defaultProjectile>
 					<warmupTime>1.1</warmupTime>
 					<range>32</range>
 					<soundCast>ImpactB</soundCast>
@@ -170,7 +170,7 @@
 				<AmmoUser>
 					<magazineSize>10</magazineSize>
 					<reloadTime>4</reloadTime>
-					<ammoSet>AmmoSet_TEEnergyCanister</ammoSet>
+					<ammoSet>AmmoSet_T90Canister</ammoSet>
 				</AmmoUser>
 				<FireModes>
 				</FireModes>
@@ -231,7 +231,7 @@
 					<recoilAmount>2.01</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_TEConcentratedPowerCharge_KE</defaultProjectile>
+					<defaultProjectile>Bullet_T76Core_KE</defaultProjectile>
 					<warmupTime>1.3</warmupTime>
 					<range>75</range>
 					<soundCast>ImpactB</soundCast>
@@ -241,7 +241,7 @@
 				<AmmoUser>
 					<magazineSize>10</magazineSize>
 					<reloadTime>4</reloadTime>
-					<ammoSet>AmmoSet_TEConcentratedPowerCharge</ammoSet>
+					<ammoSet>AmmoSet_T76Core</ammoSet>
 				</AmmoUser>
 				<FireModes>
 					<aiAimMode>AimedShot</aiAimMode>
@@ -303,7 +303,7 @@
 					<recoilAmount>1.25</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_TEEnergyCanister_KE</defaultProjectile>
+					<defaultProjectile>Bullet_T90Canister_KE</defaultProjectile>
 					<warmupTime>1.25</warmupTime>
 					<burstShotCount>3</burstShotCount>
 					<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
@@ -318,7 +318,7 @@
 				<AmmoUser>
 					<magazineSize>30</magazineSize>
 					<reloadTime>4</reloadTime>
-					<ammoSet>AmmoSet_TEEnergyCanister</ammoSet>
+					<ammoSet>AmmoSet_T76Core</ammoSet>
 				</AmmoUser>
 				<FireModes>
 					<aimedBurstShotCount>3</aimedBurstShotCount>
@@ -381,7 +381,7 @@
 					<recoilAmount>0.88</recoilAmount>
 					<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 					<hasStandardCommand>true</hasStandardCommand>
-					<defaultProjectile>Bullet_TEPowerCore_KE</defaultProjectile>
+					<defaultProjectile>Bullet_T101Core_KE</defaultProjectile>
 					<warmupTime>3.80</warmupTime>
 					<burstShotCount>20</burstShotCount>
 					<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
@@ -393,7 +393,7 @@
 				<AmmoUser>
 					<magazineSize>200</magazineSize>
 					<reloadTime>8</reloadTime>
-					<ammoSet>AmmoSet_TEPowerCore</ammoSet>
+					<ammoSet>AmmoSet_T101Core</ammoSet>
 				</AmmoUser>
 				<FireModes>
 					<aimedBurstShotCount>10</aimedBurstShotCount>

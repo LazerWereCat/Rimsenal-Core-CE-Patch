@@ -2,8 +2,8 @@
 <Defs>
 
 	<ThingCategoryDef>
-		<defName>AmmoTEPowerCharge</defName>
-		<label>TE Power Charge</label>
+		<defName>AmmoT76Core</defName>
+		<label>T76 Core</label>
 		<parent>AmmoRifles</parent>
     <iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
 	</ThingCategoryDef>
@@ -11,19 +11,19 @@
 	<!-- ==================== AmmoSet ========================== -->
 
 	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_TEPowerCharge</defName>
-		<label>TE Power Charge</label>
+		<defName>AmmoSet_T76Core</defName>
+		<label>T76 Core</label>
 		<ammoTypes>
-			<Ammo_TEPowerCharge_KE>Bullet_TEPowerCharge_KE</Ammo_TEPowerCharge_KE>
+			<Ammo_T76Core_KE>Bullet_T76Core_KE</Ammo_T76Core_KE>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 	
 	<!-- ==================== Ammo ========================== -->
 	
-	<ThingDef Class="CombatExtended.AmmoDef" Name="TEPowerChargeBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Power charge used in Tisiphone Enterprise arms.</description>
+	<ThingDef Class="CombatExtended.AmmoDef" Name="T76CoreBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>Power core used in Tisiphone Enterprise long distance weapons, contains a denser type of energy.</description>
 		<statBases>
-		<Mass>0.012</Mass>
+		<Mass>0.05</Mass>
 		<Bulk>0.03</Bulk>
 		</statBases>
 	<tradeTags>
@@ -31,43 +31,43 @@
 		<li>CE_AutoEnableCrafting</li>
 	</tradeTags>
 		<thingCategories>
-			<li>AmmoTEPowerCharge</li>
+			<li>AmmoT76Core</li>
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="TEPowerChargeBase">
-		<defName>Ammo_TEPowerCharge_KE</defName>
-		<label>TE Power Charge (KE)</label>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="T76CoreBase">
+		<defName>Ammo_T76Core_KE</defName>
+		<label>T76 Core (KE)</label>
 		<graphicData>
 			<texPath>Things/Ammo/TE</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.12</MarketValue>
+			<MarketValue>0.18</MarketValue>
 		</statBases>
 		<ammoClass>KineticEnergy</ammoClass>
 	</ThingDef>
 
 	<!-- ================== Projectiles ================== -->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseTEPowerChargeBullet" ParentName="BaseBullet" Abstract="true">
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseT76CoreBullet" ParentName="BaseBullet" Abstract="true">
 		<graphicData>
-			<texPath>Things/Projectile/ImpactM</texPath>
+			<texPath>Things/Projectile/ImpactL</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Crush</damageDef>
-			<speed>120</speed>
+			<speed>140</speed>
 			<dropsCasings>false</dropsCasings>
 		</projectile>
 	</ThingDef>
 
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseTEPowerChargeBullet">
-		<defName>Bullet_TEPowerCharge_KE</defName>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseT76CoreBullet">
+		<defName>Bullet_T76Core_KE</defName>
 		<label>TE energy blast (KE)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>20</damageAmountBase>
 			<armorPenetrationBase>0.4</armorPenetrationBase>
 		</projectile>
 	</ThingDef>
@@ -75,10 +75,10 @@
 	<!-- ==================== Recipes ========================== -->
 
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeAmmo_TEPowerCharge_KE</defName>
-		<label>make TE Power Charges (KE) x500</label>
-		<description>Craft 500 TE Power Charges (KE).</description>
-		<jobString>Making TE Power Charges (KE).</jobString>
+		<defName>MakeAmmo_T76Core_KE</defName>
+		<label>make T76 Cores (KE) x500</label>
+		<description>Craft 500 T76 Cores (KE).</description>
+		<jobString>Making T76 Cores (KE).</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -86,7 +86,7 @@
 						<li>Steel</li>
 					</thingDefs>
 				</filter>
-				<count>12</count>
+				<count>22</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -99,9 +99,9 @@
 			<li>TETable</li>
 		</recipeUsers>			
 		<products>
-			<Ammo_TEPowerCharge_KE>500</Ammo_TEPowerCharge_KE>
+			<Ammo_T76Core_KE>500</Ammo_T76Core_KE>
 		</products>
-    <workAmount>7000</workAmount>
+    <workAmount>4500</workAmount>
 	</RecipeDef>
 
 	

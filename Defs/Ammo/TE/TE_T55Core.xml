@@ -2,8 +2,8 @@
 <Defs>
 
 	<ThingCategoryDef>
-		<defName>AmmoTEPowerCore</defName>
-		<label>TE Power Core</label>
+		<defName>AmmoT55Core</defName>
+		<label>T55 Core</label>
 		<parent>AmmoRifles</parent>
     <iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
 	</ThingCategoryDef>
@@ -11,76 +11,74 @@
 	<!-- ==================== AmmoSet ========================== -->
 
 	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_TEPowerCore</defName>
-		<label>TE Power Core</label>
+		<defName>AmmoSet_T55Core</defName>
+		<label>T55 Core</label>
 		<ammoTypes>
-			<Ammo_TEPowerCore_KE>Bullet_TEPowerCore_KE</Ammo_TEPowerCore_KE>
+			<Ammo_T55Core_KE>Bullet_T55Core_KE</Ammo_T55Core_KE>
 		</ammoTypes>
 	</CombatExtended.AmmoSetDef>
 	
 	<!-- ==================== Ammo ========================== -->
 	
-	<ThingDef Class="CombatExtended.AmmoDef" Name="TEPowerCoreBase" ParentName="SmallAmmoBase" Abstract="True">
-		<description>Power core used to power the Tisiphone Enterprise Kinetic Lance.</description>
+	<ThingDef Class="CombatExtended.AmmoDef" Name="T55CoreBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>Power core used in Tisiphone Enterprise general weapons.</description>
 		<statBases>
-		<Mass>0.012</Mass>
-		<Bulk>0.03</Bulk>
+		<Mass>0.03</Mass>
+		<Bulk>0.02</Bulk>
 		</statBases>
 	<tradeTags>
 		<li>CE_AutoEnableTrade</li>
 		<li>CE_AutoEnableCrafting</li>
 	</tradeTags>
 		<thingCategories>
-			<li>AmmoTEPowerCore</li>
+			<li>AmmoT55Core</li>
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="TEPowerCoreBase">
-		<defName>Ammo_TEPowerCore_KE</defName>
-		<label>TE Power Core (KE)</label>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="T55CoreBase">
+		<defName>Ammo_T55Core_KE</defName>
+		<label>T55 Core (KE)</label>
 		<graphicData>
 			<texPath>Things/Ammo/TE</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.36</MarketValue>
+			<MarketValue>0.12</MarketValue>
 		</statBases>
 		<ammoClass>KineticEnergy</ammoClass>
 	</ThingDef>
 
 	<!-- ================== Projectiles ================== -->
 
-	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseTEPowerCoreBullet" ParentName="BaseBullet" Abstract="true">
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseT55CoreBullet" ParentName="BaseBullet" Abstract="true">
 		<graphicData>
-			<texPath>Things/Projectile/ImpactB</texPath>
+			<texPath>Things/Projectile/ImpactM</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>KineticImpact</damageDef>
-			<speed>300</speed>
+			<damageDef>Crush</damageDef>
+			<speed>160</speed>
 			<dropsCasings>false</dropsCasings>
 		</projectile>
 	</ThingDef>
 
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseTEPowerCoreBullet">
-		<defName>Bullet_TEPowerCore_KE</defName>
-		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseT55CoreBullet">
+		<defName>Bullet_T55Core_KE</defName>
 		<label>TE energy blast (KE)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>8</damageAmountBase>
-			<explosionRadius>0.5</explosionRadius>
-			<armorPenetrationBase>100</armorPenetrationBase>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>0.4</armorPenetrationBase>
 		</projectile>
 	</ThingDef>
 
 	<!-- ==================== Recipes ========================== -->
 
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeAmmo_TEPowerCore_KE</defName>
-		<label>make TE Power Cores (KE) x500</label>
-		<description>Craft 500 TE Power Cores (KE).</description>
-		<jobString>Making TE Power Cores (KE).</jobString>
+		<defName>MakeAmmo_T55Core_KE</defName>
+		<label>make T55 Cores (KE) x500</label>
+		<description>Craft 500 T55 Cores (KE).</description>
+		<jobString>Making T55 Cores (KE).</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -99,11 +97,11 @@
 		<researchPrerequisite>KineticTech</researchPrerequisite>
 		<recipeUsers Inherit="False">
 			<li>TETable</li>
-		</recipeUsers>		
+		</recipeUsers>			
 		<products>
-			<Ammo_TEPowerCore_KE>500</Ammo_TEPowerCore_KE>
+			<Ammo_T55Core_KE>500</Ammo_T55Core_KE>
 		</products>
-    <workAmount>7000</workAmount>
+    <workAmount>3300</workAmount>
 	</RecipeDef>
 
 	
