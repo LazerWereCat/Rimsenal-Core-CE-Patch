@@ -19,7 +19,7 @@
 			<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMicrowaveBullet">
 				<defName>Bullet_Microwave</defName>
 				<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
-				<label>TE energy blast (KE)</label>
+				<label>microwave blast</label>
 				<projectile Class="CombatExtended.ProjectilePropertiesCE">
 					<damageAmountBase>1</damageAmountBase>
 					<explosionRadius>1.5</explosionRadius>

@@ -6,7 +6,7 @@
 			<li Class="CombatExtended.PatchOperationFindMod">
 				<modName>Rimsenal</modName>
 			</li>
-			
+	
 			<!-- ==========  Add 40x46mm smoke grenade =========== -->
 			
 			<li Class="PatchOperationAdd">

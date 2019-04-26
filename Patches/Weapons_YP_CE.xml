@@ -325,6 +325,8 @@
 					<soundCastTail>GunTail_Medium</soundCastTail>
 					<muzzleFlashScale>14</muzzleFlashScale>
 				</Properties>
+				<FireModes>			
+				</FireModes>
 			</li>
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="YP_GeugGwang"]/tools</xpath>
