@@ -10,7 +10,7 @@
 			<!-- ==========  "Black Panther" Hybrid Rifle =========== -->
 
 			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-				<defName>GD_ModularRifle</defName>
+				<defName>GD_HybridRifle</defName>
 				<statBases>
 					<Mass>3.5</Mass>
 					<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
@@ -47,7 +47,7 @@
 				</weaponTags>
 			</li>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="GD_ModularRifle"]/tools</xpath>
+				<xpath>Defs/ThingDef[defName="GD_HybridRifle"]/tools</xpath>
 				<value>
 					<tools>
 						<li Class="CombatExtended.ToolCE">
