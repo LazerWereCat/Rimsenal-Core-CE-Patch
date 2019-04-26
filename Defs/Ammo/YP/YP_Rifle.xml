@@ -5,7 +5,7 @@
 		<defName>AmmoRifleYP</defName>
 		<label>5.45x45mm YP</label>
 		<parent>AmmoRifles</parent>
-    <iconPath>Things/RS_UI/CarbonCrystal</iconPath>
+    <iconPath>Things/RS_UI/YPRifle</iconPath>
 	</ThingCategoryDef>
 	
 	<!-- ==================== AmmoSet ========================== -->
@@ -39,7 +39,7 @@
 		<defName>Ammo_RifleYP_CC</defName>
 		<label>5.45x45mm YP cartridge (CC)</label>
 		<graphicData>
-			<texPath>Things/Ammo/YP</texPath>
+			<texPath>Things/Ammo/YP/YP_Rifle</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>

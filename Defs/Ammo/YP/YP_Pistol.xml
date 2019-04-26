@@ -5,7 +5,7 @@
 		<defName>AmmoPistolYP</defName>
 		<label>9x21mm YP</label>
 		<parent>AmmoPistols</parent>
-    <iconPath>Things/RS_UI/CarbonCrystal</iconPath>
+    <iconPath>Things/RS_UI/YPPistol</iconPath>
 	</ThingCategoryDef>
 	
 	<!-- ==================== AmmoSet ========================== -->
@@ -39,7 +39,7 @@
 		<defName>Ammo_PistolYP_CC</defName>
 		<label>9x21mm YP cartridge (CC)</label>
 		<graphicData>
-			<texPath>Things/Ammo/YP</texPath>
+			<texPath>Things/Ammo/YP/YP_Pistol</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
