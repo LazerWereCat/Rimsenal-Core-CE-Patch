@@ -455,7 +455,7 @@
     	<label>throw satchel charge</label>
     	<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
     	<hasStandardCommand>true</hasStandardCommand>
-    	<range>10.0</range>
+    	<range>7.0</range>
       <minRange>4</minRange>
     	<warmupTime>0.8</warmupTime>
     	<noiseRadius>4</noiseRadius>
