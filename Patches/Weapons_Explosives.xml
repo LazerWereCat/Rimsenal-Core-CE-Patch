@@ -446,7 +446,7 @@
   <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
     <defName>JI_Dunder</defName>
     <statBases>
-			<Mass>0.4</Mass>
+			<Mass>5.0</Mass>
 			<MarketValue>5.25</MarketValue>
 			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
 			<SightsEfficiency>1</SightsEfficiency>
@@ -455,7 +455,7 @@
     	<label>throw satchel charge</label>
     	<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
     	<hasStandardCommand>true</hasStandardCommand>
-    	<range>10.0</range>
+    	<range>7.0</range>
       <minRange>4</minRange>
     	<warmupTime>0.8</warmupTime>
     	<noiseRadius>4</noiseRadius>
